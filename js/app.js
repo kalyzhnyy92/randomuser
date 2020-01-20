@@ -22,8 +22,11 @@ function append(parent, el) {
 }
 
 let div = document.getElementById('authors');
-let url = 'https://randomuser.me/api/?results=100';
-fetch(url)
+let number = Math.round(Math.random()*100);
+let url = 'https://randomuser.me/api/?results=';
+let randomUsers = `${url}${number}`;
+
+fetch(randomUsers)
 	.then((resp) => resp.json())
 	.then(function(data) {
 let authors = data.results;
