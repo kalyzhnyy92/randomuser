@@ -6,8 +6,8 @@ body{
 * {
     box-sizing: border-box;
 }
-.header{
-    max-width: 1350px;
+.main{
+    max-width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin: 0 auto;
@@ -49,20 +49,20 @@ body{
 .button:hover:after {
     transform: translateX(0);
 }
-.header__link{
+.wrapper__link{
     color: #000;
     padding: 20px 40px;
     text-decoration: none;
     position: relative;
     z-index: 5;
+    cursor: pointer;
 }
-.header__button{
+.wrapper__button{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 /*Прелоадер*/
 .preloader{
@@ -73,6 +73,8 @@ body{
     bottom: 0;
     background: #524f79;
     z-index: 10;
+    visibility: hidden;
+    opacity: 0;
 }
 .preloader__loader{
     width: 250px;
@@ -100,26 +102,21 @@ body{
 .visible {
     visibility: visible;
     opacity: 1;
-    transition: all 500ms ease;
 }
 .hidden {
     visibility: hidden;
     opacity: 0;
-    transition: all 500ms ease;
 }
-
-.main{
-    max-width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin: 0 auto;
+.active{
+    display: block !important;
 }
 .title{
     color: #fff;
     padding: 50px 0;
     font-size: 48px;
     text-transform: uppercase;
-    text-align: center; 
+    text-align: center;
+    display: none;
 }
 .card{
     display: flex;
